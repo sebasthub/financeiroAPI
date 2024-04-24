@@ -19,7 +19,7 @@ router = APIRouter()
 
 
 @router.get("/", response_model=list[PagamentoBase], tags=["pagamento"])
-def get_pagamento(db: Session = Depends(get_db)):
+def get_pagamentos(db: Session = Depends(get_db)):
     pagamentos = pagamento.get_pagamentos(db=db)
     return pagamentos
 

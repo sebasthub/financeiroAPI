@@ -11,3 +11,5 @@ class Pagamento(Base):
     descricao = Column(String(255), nullable=False)
     data_lancamento = Column(DateTime(), nullable=False)
     parcelas = relationship('Parcela', back_populates='pagamento')
+    categoria_id = Column(Integer, ForeignKey('categoria.id'))
+    categoria = relationship('Categoria')

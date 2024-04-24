@@ -14,17 +14,17 @@ def get_parcela(db: Session, id_pagamento: int):
 
 
 def get_pagamentos(db: Session):
-    pagamentos_model: list[type[Pagamento]] = db.query(Pagamento).options(joinedload(Pagamento.parcelas)).all()
+    pagamentos_model: list[type[Pagamento]] = db.query(Pagamento).options(joinedload(Pagamento.parcelas), joinedload(Pagamento.categoria)).all()
     return pagamentos_model
 
 
 def get_pagamento(pagamento_id: int, db: Session):
-    return db.query(Pagamento).filter(Pagamento.id == pagamento_id).options(joinedload(Pagamento.parcelas)).first()
+    return db.query(Pagamento).filter(Pagamento.id == pagamento_id).options(joinedload(Pagamento.parcelas), joinedload(Pagamento.categoria)).first()
 
 
 def create_pagamento(db: Session, pagamento: PagamentoCreate):
     pagamento_model = Pagamento(nome=pagamento.nome, descricao=pagamento.descricao,
-                                data_lancamento=pagamento.data_lancamento)
+                                data_lancamento=pagamento.data_lancamento, categoria_id=pagamento.categoria_id)
     db.add(pagamento_model)
     db.commit()
     db.refresh(pagamento_model)
