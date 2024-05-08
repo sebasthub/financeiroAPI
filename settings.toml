@@ -1,1 +1,1 @@
-database_string='sqlite:///./sql_app.db'
+database_string='postgresql://host=postgres:5432/financeiro?user=sebas&password=sn100102'
