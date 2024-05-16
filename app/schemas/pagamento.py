@@ -20,3 +20,12 @@ class PagamentoCreate(BaseModel):
     valor: float
     categoria_id: int
     qtd_parcelas: int
+
+
+class PagamentoGet(BaseModel):
+    id: int
+    nome: str
+    descricao: str
+    data_lancamento: datetime
+    categoria: CategoriaBase
+    valor: float
