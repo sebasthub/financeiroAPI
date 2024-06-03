@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ab91b4-9f76-41c2-9d03-66308898a99e" name="Changes" comment="Dockerfile">
+    <list default="true" id="d2ab91b4-9f76-41c2-9d03-66308898a99e" name="Changes" comment="fix: get pagamento agora tem valor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/pagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/pagamento.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/pagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/pagamento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,8 +141,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
@@ -161,7 +162,13 @@
       <workItem from="1714752705591" duration="8000" />
       <workItem from="1715191692629" duration="1214000" />
       <workItem from="1715195737085" duration="280000" />
-      <workItem from="1715820170164" duration="5270000" />
+      <workItem from="1715820170164" duration="5844000" />
+      <workItem from="1715860061131" duration="6000" />
+      <workItem from="1716120888334" duration="1775000" />
+      <workItem from="1716237127198" duration="638000" />
+      <workItem from="1716483445261" duration="10000" />
+      <workItem from="1717342390067" duration="3704000" />
+      <workItem from="1717377562328" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile">
       <option name="closed" value="true" />
@@ -171,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715195610396</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix: get pagamento agora tem valor">
+      <option name="closed" value="true" />
+      <created>1715828801944</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715828801944</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,9 +194,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile" />
+    <MESSAGE value="fix: get pagamento agora tem valor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: get pagamento agora tem valor" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/financeiroAPI$financeiroAPI.coverage" NAME="financeiroAPI Coverage Results" MODIFIED="1714746644609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/financeiroAPI$financeiroAPI.coverage" NAME="financeiroAPI Coverage Results" MODIFIED="1717377802871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
