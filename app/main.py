@@ -10,7 +10,7 @@ from .database import SessionLocal, engine
 models.Base.metadata.create_all(bind=engine)
 
 sentry_sdk.init(
-    dsn="",
+    dsn="https://c81e901270e9497128b41d060f2b40f7@o4507365364531200.ingest.us.sentry.io/4507365370691584",
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     traces_sample_rate=1.0,
