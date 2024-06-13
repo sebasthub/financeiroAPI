@@ -1,8 +1,10 @@
-from sqlalchemy.orm import Session, joinedload
-from datetime import datetime
+from sqlalchemy.orm import Session
+from pwdlib import PasswordHash
 
 from app.models import Usuario
 from app.schemas import UsuarioBase
+
+pwd_context = PasswordHash.recommended()
 
 
 def get_usuarios(db: Session):
@@ -15,8 +17,9 @@ def get_usuario(usuario_id, db: Session):
 
 
 def create_usuario(db: Session, usuario: UsuarioBase):
+    senhaHash = pwd_context.hash(usuario.senha)
     usuario_model = Usuario(username=usuario.username, email=usuario.email,
-                            senha=usuario.senha)
+                            senha=senhaHash)
     db.add(usuario_model)
     db.commit()
     db.refresh(usuario_model)
