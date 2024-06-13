@@ -17,16 +17,12 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin
-    ports:
-      - "4000:80"
     volumes:
       - pgadmin_data:/var/lib/pgadmin
 
   app:
     build: .
     container_name: app
-    ports:
-      - "2500:8000"
     depends_on:
       - postgres
 
