@@ -11,4 +11,4 @@ class Usuario(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     username = Column(String(255), nullable=False)
     email = Column(String(255), nullable=False)
-    senha = Column(DateTime(), nullable=False)
+    senha = Column(String(255), nullable=False)

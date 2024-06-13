@@ -24,13 +24,13 @@ def get_usuarios(db: Session = Depends(get_db)):
     return usuarios
 
 
-@router.get("/{id}", tags=["pagamento"])
+@router.get("/{id}", tags=["usuario"])
 def get_usuario(id, db: Session = Depends(get_db)):
     retorno = usuario.get_usuario(id, db=db)
     return retorno
 
 
-@router.post("/", tags=["pagamento"])
+@router.post("/", tags=["usuario"])
 def post_usuario(usuario_create: UsuarioBase, db: Session = Depends(get_db)):
     usuario_retorno = usuario.create_usuario(db=db, usuario=usuario_create)
     return usuario_retorno

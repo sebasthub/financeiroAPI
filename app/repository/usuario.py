@@ -15,8 +15,8 @@ def get_usuario(usuario_id, db: Session):
 
 
 def create_usuario(db: Session, usuario: UsuarioBase):
-    usuario_model = Usuario(username=usuario.username, email=usuario.descricao,
-                            senha=usuario.data_lancamento)
+    usuario_model = Usuario(username=usuario.username, email=usuario.email,
+                            senha=usuario.senha)
     db.add(usuario_model)
     db.commit()
     db.refresh(usuario_model)

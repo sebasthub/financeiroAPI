@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 import uuid
 
+
 class UsuarioBase(BaseModel):
-    usuario: str
+    username: str
     email: str
     senha: str
