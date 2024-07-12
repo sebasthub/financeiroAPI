@@ -12,6 +12,9 @@ class PagamentoBase(BaseModel):
     categoria: CategoriaBase
     parcelas: list[ParcelaBase]
 
+    class Config:
+        from_attributes = True
+
 
 class PagamentoCreate(BaseModel):
     nome: str

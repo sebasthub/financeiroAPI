@@ -1,6 +1,7 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
+from app.auth import User, get_user
 from app.schemas import PagamentoBase, PagamentoCreate, PagamentoGet, CategoriaBase
 from app.database import SessionLocal
 from app.repository import pagamento
@@ -19,8 +20,8 @@ router = APIRouter()
 
 
 @router.get("/", response_model=list[PagamentoGet], tags=["pagamento"])
-def get_pagamentos(db: Session = Depends(get_db)):
-    pagamentos = pagamento.get_pagamentos(db=db)
+def get_pagamentos(db: Session = Depends(get_db), usuario: User = Depends(get_user)):
+    pagamentos = pagamento.get_pagamentos(db=db, usuario=usuario)
     list_get: list[PagamentoGet] = []
     for pg in pagamentos:
         acm = 0
@@ -32,13 +33,15 @@ def get_pagamentos(db: Session = Depends(get_db)):
     return list_get
 
 
-@router.get("/{id}", response_model=PagamentoBase, tags=["pagamento"])
-def get_pagamento(id: int, db: Session = Depends(get_db)):
-    retorno = pagamento.get_pagamento(id, db=db)
+@router.get("/{id}", tags=["pagamento"])
+def get_pagamento(id: int, db: Session = Depends(get_db), usuario: User = Depends(get_user)):
+    retorno = pagamento.get_pagamento(id, db=db, usuario=usuario)
+    if retorno is None:
+        return HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     return retorno
 
 
 @router.post("/", tags=["pagamento"])
-def post_pagamento(pagamento_create: PagamentoCreate, db: Session = Depends(get_db)):
-    pagamento_retorno = pagamento.create_pagamento(db=db,pagamento=pagamento_create)
+def post_pagamento(pagamento_create: PagamentoCreate, db: Session = Depends(get_db), usuario: User = Depends(get_user)):
+    pagamento_retorno = pagamento.create_pagamento(db=db, pagamento=pagamento_create, usuario=usuario)
     return pagamento_retorno
