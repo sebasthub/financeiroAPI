@@ -4,10 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ab91b4-9f76-41c2-9d03-66308898a99e" name="Changes" comment="fix: cadastro de usuario com tipos errados">
+    <list default="true" id="d2ab91b4-9f76-41c2-9d03-66308898a99e" name="Changes" comment="fix: validacoes e hash de senha">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repository/usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/usuario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/categoria.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/categoria.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pagamento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/usuario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/categoria.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/categoria.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/usuario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/categoria.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/categoria.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/usuario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/categoria.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/categoria.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/usuario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +66,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;FastAPI.financeiroAPI.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "FastAPI.financeiroAPI.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+  <component name="RunManager" selected="FastAPI.financeiroAPI">
     <configuration name="financeiroAPI" type="Python.FastAPI">
       <option name="file" value="$PROJECT_DIR$/app/main.py" />
       <module name="financeiroAPI" />
@@ -140,8 +158,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
-        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -174,7 +192,11 @@
       <workItem from="1718208811089" duration="165000" />
       <workItem from="1718281949868" duration="6000" />
       <workItem from="1718284993855" duration="107000" />
-      <workItem from="1718301110599" duration="10323000" />
+      <workItem from="1718301110599" duration="10645000" />
+      <workItem from="1719970575283" duration="7000" />
+      <workItem from="1720049873217" duration="379000" />
+      <workItem from="1720808779397" duration="2167000" />
+      <workItem from="1720813330111" duration="4614000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile">
       <option name="closed" value="true" />
@@ -232,11 +254,22 @@
       <option name="project" value="LOCAL" />
       <updated>1718310867914</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix: validacoes e hash de senha">
+      <option name="closed" value="true" />
+      <created>1718313500259</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718313500259</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dockerfile" />
@@ -246,9 +279,10 @@
     <MESSAGE value="fix: alteracoes docker compose" />
     <MESSAGE value="feat: cadastro de usuario" />
     <MESSAGE value="fix: cadastro de usuario com tipos errados" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: cadastro de usuario com tipos errados" />
+    <MESSAGE value="fix: validacoes e hash de senha" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: validacoes e hash de senha" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/financeiroAPI$financeiroAPI.coverage" NAME="financeiroAPI Coverage Results" MODIFIED="1717377802871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/financeiroAPI$financeiroAPI.coverage" NAME="financeiroAPI Coverage Results" MODIFIED="1720817754433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
